@@ -1,0 +1,14 @@
+[FORMAT]
+# Maximum number of characters on a single line
+max-line-length=100
+
+[BASIC]
+# Good variable names which should always be accepted
+good-names=i,j,k,ex,Run,_,id,db
+
+[DESIGN]
+# Maximum number of arguments for function / method
+max-args=8
+
+# Maximum number of attributes for a class
+max-attributes=15 

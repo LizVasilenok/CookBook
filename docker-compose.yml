@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  foodbook:
+    build: .
+    container_name: foodbook-api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./:/app
+      - foodbook_data:/app/data
+    environment:
+      - DEBUG=True
+      - DB_PATH=/app/data/foodbook.db
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+    restart: unless-stopped
+
+volumes:
+  foodbook_data: 
